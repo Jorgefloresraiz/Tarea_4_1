@@ -1,0 +1,42 @@
+{
+  "tabla": [
+    {
+      "Clasificador": "Regresión logística",
+      "Accuracy promedio": 0.9666666666666668,
+      "Desviación estándar": 0.033333333333333326
+    },
+    {
+      "Clasificador": "Árbol (profundidad 3)",
+      "Accuracy promedio": 0.9400000000000001,
+      "Desviación estándar": 0.05537749241945382
+    },
+    {
+      "Clasificador": "GaussianNB",
+      "Accuracy promedio": 0.9533333333333334,
+      "Desviación estándar": 0.052068331172711015
+    },
+    {
+      "Clasificador": "KNN (CV anidada)",
+      "Accuracy promedio": 0.96,
+      "Desviación estándar": 0.053333333333333316
+    },
+    {
+      "Clasificador": "Random Forest",
+      "Accuracy promedio": 0.9533333333333334,
+      "Desviación estándar": 0.052068331172711015
+    }
+  ],
+  "k_por_fold": [
+    3,
+    11,
+    7,
+    11,
+    5,
+    3,
+    7,
+    11,
+    7,
+    7
+  ],
+  "k_final": 5
+}

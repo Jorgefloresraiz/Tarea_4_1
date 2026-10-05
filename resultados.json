@@ -1,0 +1,37 @@
+{
+  "clasificadores": [
+    {
+      "Clasificador": "Regresión logística",
+      "Accuracy promedio": 0.9666666666666668,
+      "Desviación estándar": 0.033333333333333326
+    },
+    {
+      "Clasificador": "Árbol de decisión",
+      "Accuracy promedio": 0.9400000000000001,
+      "Desviación estándar": 0.05537749241945382
+    },
+    {
+      "Clasificador": "Naive Bayes",
+      "Accuracy promedio": 0.9533333333333334,
+      "Desviación estándar": 0.052068331172711015
+    }
+  ],
+  "profundidades": [
+    "2",
+    "3",
+    "5",
+    "Sin límite"
+  ],
+  "entrenamiento": [
+    0.96,
+    0.9733333333333334,
+    1.0,
+    1.0
+  ],
+  "cv": [
+    0.9266666666666667,
+    0.9400000000000001,
+    0.9333333333333333,
+    0.9333333333333333
+  ]
+}
