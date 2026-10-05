@@ -1,0 +1,3 @@
+# Auditoría de modelos
+En Claude Code, desde el repositorio: `/auditoria-modelos ruta/al/proyecto`.
+Indique objetivo, clase positiva, subgrupo, costo de errores y ubicación de predicciones. La Skill produce AUDIT_REPORT.md y no modifica las entradas. PASA requiere evidencia; FALLA identifica un incumplimiento; NO SE PUEDE DETERMINAR expresa falta de evidencia o soporte. Umbral de disparidad: 0.10, mínimo 20 casos y 10 positivos para recall. No certifica seguridad clínica ni equidad causal. La inspección semántica requiere contexto de las variables; no basta buscar palabras. Compatible con lectura manual del SKILL.md por otros asistentes; documentar cuál se usó realmente.
