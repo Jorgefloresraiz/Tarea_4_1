@@ -1,0 +1,16 @@
+{
+  "tipo": "Segunda revisión manual por Codex en la misma conversación, no ciega ni independiente",
+  "hash": "a39bacf64d0fa5b2e465f8766d8963d96c2228468d7de365fb120eb7b1a0f10f",
+  "veredictos": {
+    "R1": "PASA",
+    "R2": "FALLA",
+    "P1": "PASA",
+    "P2": "PASA",
+    "P3": "PASA",
+    "F1": "NO SE PUEDE DETERMINAR",
+    "S2": "PASA",
+    "D1_duplicados": "PASA",
+    "D1_personas": "NO SE PUEDE DETERMINAR"
+  },
+  "evidencia": "Celdas2,4,6: deduplicación y split antes de fit; 335 predicciones verificadas; celda7 no interpreta las bandas residuales concretas; 3 predicciones negativas; temporalidad e identidad no documentadas."
+}

@@ -4,7 +4,7 @@ Skill v3; aplicación por Codex, 6 octubre 2026. Fuente: App_Auditoria_Insurance
 | Criterio | Resultado | Evidencia |
 |---|---|---|
 | R1 coherencia numérica | PASA | Celda4: RMSE5940.0272 y R²0.7959403 para lineal. Celda6 exporta predicciones. evidencia/insurance_numerica_1.json recalcula los valores desde335 casos; RMSE²=MSE. El R² negativo del Dummy es válido. |
-| R2 interpretación y residuos | FALLA | Celda6 y residuos_insurance.png muestran bandas positivas y negativas, cola derecha y predicciones negativas. Celdas1 y7 no confirman moneda/período de costos. Hay estructura no capturada; no equivale a un error de fórmula. |
+| R2 interpretación y residuos | FALLA | Celda6 grafica bandas residuales y cola derecha, pero celda7 solo enumera límites generales: falta interpretar esos patrones observados y comparar explícitamente R² de entrenamiento/prueba. evidencia/insurance_numerica_1.json identifica3 predicciones negativas. Moneda/período no confirmados (celda1). FALLA por interpretación incompleta, no por exigir residuos perfectos. |
 | P1 partición | PASA | Celda4: único train_test_split, test_size0.25 y random_state42, índices disjuntos; ambos modelos usan los mismos1002/335 casos. No corresponde estratificar un objetivo continuo. |
 | P2 preprocesamiento | PASA | Celda4: imputadores, codificación y escalado dentro del Pipeline; fit sobre X_train únicamente. |
 | P3 selección | PASA | Celda4: modelos y parámetros fijados, sin búsqueda en prueba. Comparación exploratoria; no se promete una estimación independiente posterior a elegir modelo. |
