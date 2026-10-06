@@ -1,0 +1,66 @@
+{
+  "tipo": "regresion",
+  "global": {
+    "n": 335,
+    "MSE": 35283922.77111072,
+    "RMSE": 5940.027169223279,
+    "R2": 0.7959403124253075,
+    "sesgo": 487.83179027253715,
+    "predicciones_negativas": 3
+  },
+  "subgrupos": [
+    {
+      "grupo": "northeast",
+      "metricas": {
+        "n": 95,
+        "MSE": 38247043.75443887,
+        "RMSE": 6184.41943552011,
+        "R2": 0.6800517629011533,
+        "sesgo": 740.4365855642329,
+        "predicciones_negativas": 1
+      },
+      "brecha": 0.04114329098746994,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "northwest",
+      "metricas": {
+        "n": 71,
+        "MSE": 39790983.600887775,
+        "RMSE": 6308.00948008861,
+        "R2": 0.7839076017832332,
+        "sesgo": 1295.4642055517409,
+        "predicciones_negativas": 1
+      },
+      "brecha": 0.061949600630100896,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "southeast",
+      "metricas": {
+        "n": 95,
+        "MSE": 38571105.80996097,
+        "RMSE": 6210.564049260016,
+        "R2": 0.8375459745766619,
+        "sesgo": 634.8544789229544,
+        "predicciones_negativas": 0
+      },
+      "brecha": 0.045544720980141985,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "southwest",
+      "metricas": {
+        "n": 74,
+        "MSE": 22935541.67623074,
+        "RMSE": 4789.106563465752,
+        "R2": 0.8320936611877138,
+        "sesgo": -800.0940537723844,
+        "predicciones_negativas": 1
+      },
+      "brecha": 0.19375679150437664,
+      "resultado": "PASA"
+    }
+  ],
+  "alcance": "Solo consistencia numérica y disparidad; partición y fuga requieren revisión de código."
+}

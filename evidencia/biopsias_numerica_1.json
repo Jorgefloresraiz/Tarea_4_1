@@ -1,0 +1,49 @@
+{
+  "tipo": "clasificacion",
+  "global": {
+    "n": 143,
+    "TP": 27,
+    "FN": 26,
+    "FP": 12,
+    "TN": 78,
+    "accuracy": 0.7342657342657343,
+    "precision": 0.6923076923076923,
+    "recall": 0.5094339622641509,
+    "F1": 0.5869565217391305
+  },
+  "subgrupos": [
+    {
+      "grupo": "con previas",
+      "metricas": {
+        "n": 112,
+        "TP": 20,
+        "FN": 21,
+        "FP": 9,
+        "TN": 62,
+        "accuracy": 0.7321428571428571,
+        "precision": 0.6896551724137931,
+        "recall": 0.4878048780487805,
+        "F1": 0.5714285714285714
+      },
+      "brecha": 0.021629084215370464,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "sin previas",
+      "metricas": {
+        "n": 31,
+        "TP": 7,
+        "FN": 5,
+        "FP": 3,
+        "TN": 16,
+        "accuracy": 0.7419354838709677,
+        "precision": 0.7,
+        "recall": 0.5833333333333334,
+        "F1": 0.6363636363636364
+      },
+      "brecha": 0.07389937106918243,
+      "resultado": "PASA"
+    }
+  ],
+  "alcance": "Solo consistencia numérica y disparidad; partición y fuga requieren revisión de código."
+}

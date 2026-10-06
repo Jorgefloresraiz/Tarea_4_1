@@ -1,0 +1,15 @@
+{
+  "tipo": "Revisi\u00f3n manual de Skill completa por Codex",
+  "hash": "a39bacf64d0fa5b2e465f8766d8963d96c2228468d7de365fb120eb7b1a0f10f",
+  "veredictos": {
+    "R1": "PASA",
+    "R2": "FALLA",
+    "P1": "PASA",
+    "P2": "PASA",
+    "P3": "PASA",
+    "F1": "NO SE PUEDE DETERMINAR",
+    "S2": "PASA",
+    "D1_duplicados": "PASA",
+    "D1_personas": "NO SE PUEDE DETERMINAR"
+  }
+}

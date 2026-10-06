@@ -1,0 +1,11 @@
+test_disparidad_detectada (__main__.AuditoriaTests.test_disparidad_detectada) ... ok
+test_grupo_pequeno_no_aprueba (__main__.AuditoriaTests.test_grupo_pequeno_no_aprueba) ... ok
+test_matriz_clase_cero (__main__.AuditoriaTests.test_matriz_clase_cero) ... ok
+test_no_finitos_rechazados (__main__.AuditoriaTests.test_no_finitos_rechazados) ... ok
+test_objetivo_constante_indefinido (__main__.AuditoriaTests.test_objetivo_constante_indefinido) ... ok
+test_r2_negativo_es_valido (__main__.AuditoriaTests.test_r2_negativo_es_valido) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

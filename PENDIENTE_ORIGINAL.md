@@ -1,0 +1,2 @@
+# Único insumo aún pendiente
+La consigna4.1 exige descargar nuevamente el original defectuoso de biopsias desde la tarea3.1. El archivo local /Users/yero/Downloads/App_Diagnostico_Biopsias_Mama.ipynb contiene una celda de diagnóstico agregada y no se certifica como original. Falta recibir enlace o archivo original. No se generará un informe que afirme haber auditado esa descarga antes de tenerla. Cuando llegue: conservar hash, auditar sin modificar, contrastar fallos conocidos y cerrar informe APA/bitácora/repositorio.

@@ -1,0 +1,50 @@
+{
+  "tabla": [
+    {
+      "modelo": "Referencia",
+      "MSE": 173526859.57525167,
+      "RMSE": 13172.959408396113,
+      "R2": -0.0035685935617049136,
+      "R2_train": 0.0
+    },
+    {
+      "modelo": "Lineal",
+      "MSE": 35283922.77111072,
+      "RMSE": 5940.027169223279,
+      "R2": 0.7959403124253075,
+      "R2_train": 0.7297491098061568
+    }
+  ],
+  "subgrupos": [
+    {
+      "grupo": "northeast",
+      "n": 95,
+      "RMSE": 6184.41943552011,
+      "brecha_relativa": 0.04114329098746994,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "northwest",
+      "n": 71,
+      "RMSE": 6308.009480088609,
+      "brecha_relativa": 0.06194960063010074,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "southeast",
+      "n": 95,
+      "RMSE": 6210.564049260016,
+      "brecha_relativa": 0.045544720980141985,
+      "resultado": "PASA"
+    },
+    {
+      "grupo": "southwest",
+      "n": 74,
+      "RMSE": 4789.106563465752,
+      "brecha_relativa": 0.19375679150437664,
+      "resultado": "PASA"
+    }
+  ],
+  "n_train": 1002,
+  "n_test": 335
+}
