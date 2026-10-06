@@ -1,2 +1,2 @@
-# Único insumo aún pendiente
-La consigna4.1 exige descargar nuevamente el original defectuoso de biopsias desde la tarea3.1. El archivo local /Users/yero/Downloads/App_Diagnostico_Biopsias_Mama.ipynb contiene una celda de diagnóstico agregada y no se certifica como original. Falta recibir enlace o archivo original. No se generará un informe que afirme haber auditado esa descarga antes de tenerla. Cuando llegue: conservar hash, auditar sin modificar, contrastar fallos conocidos y cerrar informe APA/bitácora/repositorio.
+# Estado de procedencia resuelto con archivo recibido
+El6 de octubre el estudiante facilitó un notebook desde Mail Downloads como original del profesor. Se preserva en originales/ con hash y se audita sin cambiarlo. No se afirma haber verificado una descarga directa del aula; el archivo contiene una celda de diagnóstico con referencias adelantadas, documentada en el informe. Ver evidencia/procedencia_original.json.

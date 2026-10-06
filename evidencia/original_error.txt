@@ -1,0 +1,45 @@
+An error occurred while executing the following cell:
+------------------
+def validar_datos(df, columnas):
+    """Revisa que las columnas indicadas no tengan nulos ni valores infinitos."""
+    problemas = {}
+    for col in columnas:
+        n_nulos = df[col].isna().sum()
+        n_infinitos = np.isinf(df[col]).sum() if np.issubdtype(df[col].dtype, np.number) else 0
+        if n_nulos or n_infinitos:
+            problemas[col] = {'nulos': int(n_nulos), 'infinitos': int(n_infinitos)}
+    return problemas
+
+# --- Diagnóstico del ValueError: ¿dónde nace el valor no finito? ---
+df_crudo = cargar_datos()
+print("1) Recién cargado: ",
+      validar_datos(df_crudo, ['mean texture', 'num_biopsias_previas']))
+
+df_derivado = construir_caracteristicas(df_crudo)
+print("2) Con la derivada:",
+      validar_datos(df_derivado, COLUMNAS_PREDICTORAS))
+
+malas = df_derivado[~np.isfinite(df_derivado['variabilidad_por_biopsia'])]
+print("3) Filas no finitas:", len(malas))
+print(malas['num_biopsias_previas'].value_counts())
+
+
+------------------
+
+----- stdout -----
+1) Recién cargado:  {}
+------------------
+
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 16[39m
+[32m     12[39m df_crudo = cargar_datos()
+[32m     13[39m print("1) Recién cargado: ",
+[32m     14[39m       validar_datos(df_crudo, [[33m'mean texture'[39m, [33m'num_biopsias_previas'[39m]))
+[32m     15[39m 
+[32m---> [39m[32m16[39m df_derivado = construir_caracteristicas(df_crudo)
+[32m     17[39m print("2) Con la derivada:",
+[32m     18[39m       validar_datos(df_derivado, COLUMNAS_PREDICTORAS))
+[32m     19[39m 
+
+[31mNameError[39m: name 'construir_caracteristicas' is not defined

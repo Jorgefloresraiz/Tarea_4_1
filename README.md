@@ -1,18 +1,41 @@
-# Tarea 4.1 — Auditoría de modelos (en desarrollo)
-Autor: Jorge Josué Flores González. Asistencia: Codex, declarada; no se atribuyen ejecuciones a Claude Code.
+# Tarea 4.1 Auditoría de modelos
 
-## Completado
-Dos notebooks ejecutados con nombres originales; Skill v1 y refinamiento v2 en commits separados; informe de Iris y caso de prueba que reveló omisión de selección global de hiperparámetros. Biopsias: matriz [27,26;12,78] en orden maligno/benigno, exhaustividad 0.5094, precisión0.6923 y F1 0.5870. Iris: cinco clasificadores con mismos folds externos; KNN selecciona k en CV interna.
+Autor: Jorge Josué Flores González. MAI 540, Atlantis University.
+Repositorio: https://github.com/Jorgefloresraiz/Tarea_4_1
 
-## Reproducir
-Crear entorno Python, instalar requirements.txt y registrar un kernel con `python -m ipykernel install --user --name tarea41`. Ejecutar `AUDIT_KERNEL=tarea41 python ejecutar_notebooks.py`, o abrir en Colab y ejecutar todas las celdas. Límite60s por celda; no continuar indefinidamente ante fallos.
-La Skill se invoca `/auditoria-modelos ruta`, ver .claude/skills/auditoria-modelos/README.md.
+## Entrega
 
-## Tercer caso y prueba adicional
-Insurance fue elegido por el estudiante entre los datasets compartidos del aula. App_Auditoria_Insurance.ipynb incluye datos en datos/insurance.csv, regresión lineal, referencia, predicciones y residuos. Ejecutar con `AUDIT_KERNEL=tarea41 python ejecutar_insurance.py`; en Colab subir insurance.csv cuando se solicite. AUDIT_REPORT_insurance.md documenta hallazgos sin corregir el notebook durante la auditoría. Wine es la prueba adicional de transferencia (revisión estática).
+- Informe_Tarea_4_1.docx y PDF: informe técnico de tres páginas.
+- Bitacora_Tarea_4_1.docx y PDF: bitácora de dos páginas.
+- .claude/skills/auditoria-modelos/SKILL.md: auditoría reutilizable, versión 3; README propio y verificador numérico.
+- AUDIT_REPORT_biopsias_original.md, AUDIT_REPORT_iris.md, AUDIT_REPORT_insurance.md: tres auditorías principales.
+- AUDIT_REPORT_wine_adicional.md: transferencia a un cuarto proyecto, revisión estática.
+- App_Diagnostico_Biopsias_Mama.ipynb y App_Comparacion_Clasificadores_Iris.ipynb: clasificación actualizada y ejecutada.
+- App_Auditoria_Insurance.ipynb: tercer caso construido con el dataset compartido del aula.
+- evidencia/ y pruebas/: predicciones verificadas, estabilidad observada y seis pruebas automatizadas.
 
-## Evidencia
-En evidencia/ están las dos comprobaciones numéricas, las dos revisiones manuales de Insurance y el resultado de seis pruebas. Ver estabilidad.md para limitaciones: segunda lectura no ciega y sin ejecución de Claude Code. Skill v3 incluye regresión; los commits conservan refinamientos. No se cambiaron las tareas3.1/3.2 originales.
+## Reproducción
 
-## Pendiente obligatorio
-Solo falta el notebook original defectuoso descargado nuevamente desde tarea3.1 para su auditoría. Tras recibirlo se cerrarán los tres informes principales, el informe APA2–3 páginas y bitácora1–2 páginas, y la publicación. No es todavía la entrega final; no confundir Wine adicional con el caso original requerido.
+Desde la carpeta del repositorio, con Python y un entorno virtual:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m ipykernel install --user --name auditoria41
+AUDIT_KERNEL=auditoria41 python ejecutar_notebooks.py
+AUDIT_KERNEL=auditoria41 python ejecutar_insurance.py
+python -m unittest discover -s pruebas -v
+```
+
+Los notebooks de clasificación usan datasets de scikit-learn. Insurance usa datos/insurance.csv; en Colab, subir ese archivo y ajustar su ruta si es necesario. Los archivos ejecutores guardan resultados: trabajar en una copia si se desea conservar la evidencia entregada.
+
+## Uso de la Skill
+
+En Claude Code, desde este repositorio, solicitar auditar un notebook usando auditoria-modelos y proporcionar el archivo, objetivo, clase positiva, partición y subgrupos. La Skill exige evidencia y estados PASA, FALLA o NO SE PUEDE DETERMINAR; no modifica el proyecto auditado. El script numérico no sustituye la revisión de fuga causal, temporalidad o selección de hiperparámetros.
+
+## Procedencia y límites
+
+La asistencia realizada fue Codex, no Claude Code. Insurance se construyó para la auditoría y no se presenta como notebook suministrado por el profesor. El original de biopsias se recibió por correo y se conserva byte por byte en originales/; no se verificó descarga directa del aula. Su ejecución aislada falló por una referencia anticipada a una función. Se documentaron defectos mediante lectura del código, sin inventar métricas de ejecución.
+
+Las repeticiones manuales conservaban contexto y no son pruebas ciegas. Los umbrales de subgrupos son exploratorios. Los modelos no están validados para decisiones clínicas. Esta entrega corresponde a la tarea 4.1; no completa la tarea 4.2.
